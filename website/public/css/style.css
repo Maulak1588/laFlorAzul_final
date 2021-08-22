@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(11, 8, 22);
+  margin: 0;
+} 
+a{
+  text-decoration: none;
+  color: rgb(24, 24, 24);
+}
+footer {
+  background-color: blanchedalmond;
+}
+.logo-head {
+  max-width: 450px;
+  
+}
+.box {
+  padding: 1rem;
+  height: 300px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 25px;
+  font-size: 25px;
+}
+.info-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height:260px;
+  width:260px;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+  line-height:20px;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp:5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-spacing: 0.22rem;
+  font-size: 20px;
+}
+
+.box:hover .info-box{
+  visibility: hidden;
+  opacity: 1;
+  background:rgba(0, 0, 0, 0.282);
+  padding: 3px;
+}
+.box:hover .title-box {
+  visibility: hidden;
+}
+
+
+.color-b {
+  background-color: #6c84b5;
+}
+.color-o {
+  background-color: #e14b10;
+}
+.color-y {
+  background-color: #f4d620;
+}
+.color-yw {
+  background-color: #fae5bc;
+}
+
+.title-section{
+  font-size: 80px;
+  font-family:'Montserrat', sans-serif;
+  color: rgb(145, 145, 145);
+  padding: 50px;
+}
+.box-title-section{
+  border-bottom: blanchedalmond;
+  
+}
+.cards-container {
+  display: flex;
+}
+.p-main {
+  color: #fae5bc;
+  padding: 25px;
+  font-size: 40px;
+  font-family:'Montserrat', sans-serif;
+}
+
+.card {
+width: 100%;
+border: 1px solid rgba(0,0,0,0.1);
+background-color: #FBFBFB;
+border-radius: 30px 30px 0 0;
+font-family: 'Montserrat', sans-serif;
+text-align: center;
+box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.1);
+margin: 30px;
+}
+
+.card-info {
+padding: 0 20px 20px 20px;
+}
+
+.img-card {
+max-width: 100%;
+border-radius: 30px 30px 0 0;
+}
+
+p {
+text-align: justify;
+}
+
+.button {
+display: inline-block;
+border: none;
+border-radius: 30px;
+background-color: #549E6D;
+padding: 15px 30px;
+text-decoration: none;
+color: white;
+}
+.logo-foot{
+  max-width: 100%;
+}
+.red-foot {
+  max-width: 20px;
+  height: 20px;
+  margin: 1%;
+}
