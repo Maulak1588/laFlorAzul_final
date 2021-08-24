@@ -1,8 +1,8 @@
 const express = require ('express');
 const app = express();
 const path = require('path');
-// const data = require('./utils/data')
-const title = 'La Flor Azul'
+const stories = require('./utils/stories')
+
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -11,32 +11,31 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-// app.get('/', (req, res)=>{
-//     data.getAllDishes((error, data)=>{
-//         if(error){
-//             return res.send({
-//                 error
-//             })
-//         }
-//         const JSONBody = JSON.parse(data);
-//         return res.render('index', {
-//             title,
-//             JSONBody
-//         });
+app.get('/', (req,res)=>{
+  res.render('index')
+})
 
-//     })
-  
-// })
-app.get('', (req,res)=>{
-    res.render('index')
-  })
-  
-  app.get('/clasicos', (req,res)=>{
-    res.render('pages/clasicos', {
-        title:'La Flor Azul | Clásicos'
+app.get('/clasicos', (req, res)=>{
+    // stories.getAllStories((error, data)=>{
+    //     if(error){
+    //         return res.send({
+    //             error
+    //         })
+    //     } 
+                
+    //     const JSONBody = JSON.parse(data);
+        
+        return res.render('pages/clasicos', {
+            title:'La Flor Azul | Clásicos',
+            stories
+        });
+
+
     })
-  })
   
+
+
+
   app.get('/contemporaneos', (req,res)=>{
     res.render('pages/contemporaneos', {
         title:'La Flor Azul | Contemporáneos'
